@@ -4,7 +4,5 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface IWorld extends Remote {
-	public static final String RMI_PATH = "rmi://127.0.0.1:8888/RmiWorld";
-	public static final String RMI_PATH_1 = "//localhost:8888/RmiWorld";
 	public String getHelloWorld() throws RemoteException;
 }
