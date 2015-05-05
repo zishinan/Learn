@@ -14,6 +14,11 @@ public class PropertiesUtil {
 	private PropertiesUtil() {
 		throw new Error("不要实例化!");
 	}
+	
+	public static void loadAll(){
+		load("rmi.properties");
+		load("jdbc.properties");
+	}
 
 	public static void load(String propertyName) {
 		InputStream fileStream = null;
@@ -21,9 +26,9 @@ public class PropertiesUtil {
 			fileStream = PropertiesUtil.class.getClassLoader()
 					.getResourceAsStream(propertyName);
 			properties.load(fileStream);
-			logger.info("载入系统配置文件成功！");
+			logger.info("载入系统配置文件:"+propertyName+"成功！");
 		} catch (Exception e) {
-			logger.error("载入系统配置文件错误：", e);
+			logger.error("载入系统配置文件:"+propertyName+"错误：", e);
 		} finally {
 			try {
 				fileStream.close();

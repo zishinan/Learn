@@ -10,7 +10,7 @@ public class RmiPropertyTest {
 
 	@Before
 	public void beforeTest() {
-		PropertiesUtil.load("rmi.properties");
+		PropertiesUtil.loadAll();
 	}
 	
 	@Test
