@@ -1,17 +1,17 @@
-1.ÏÂÔØMySQL
-ÎÒÏÂÔØµÄ°æ±¾£ºmysql-5.5.22.tar.gz
+1.ä¸‹è½½MySQL
+æˆ‘ä¸‹è½½çš„ç‰ˆæœ¬ï¼šmysql-5.5.22.tar.gz
 
-2.°²×°Ö®Ç°ÏÈÐ¶ÔØCentOS×Ô´øµÄMySQL
+2.å®‰è£…ä¹‹å‰å…ˆå¸è½½CentOSè‡ªå¸¦çš„MySQL
 [root@localhost ~]# yum remove mysql
 
-3.±àÒë°²×°Cmake
-ÏÂÔØcmakeÔ´Âë°ü£ºhttp://www.cmake.org/files/v2.8/cmake-2.8.4.tar.gz
+3.ç¼–è¯‘å®‰è£…Cmake
+ä¸‹è½½cmakeæºç åŒ…ï¼šhttp://www.cmake.org/files/v2.8/cmake-2.8.4.tar.gz
 
-´Ó¹²ÏíÄ¿Â¼ÒÆÖÁusrÄ¿Â¼
+ä»Žå…±äº«ç›®å½•ç§»è‡³usrç›®å½•
 [root@localhost ~]# mv /mnt/hgfs/Share-CentOS/cmake-2.8.4.tar.gz /usr/cmake-2.8.4.tar.gz
 [root@localhost ~]# cd /usr
 
-½âÑ¹²¢°²×°cmake
+è§£åŽ‹å¹¶å®‰è£…cmake
 [root@localhost usr]# tar xzvf cmake-2.8.4.tar.gz
 [root@localhost usr]# cd cmake-2.8.4
 [root@localhost cmake-2.8.4]# ./bootstrap
@@ -27,11 +27,11 @@ See cmake_bootstrap.log for compilers attempted.
 ---------------------------------------------
 Log of errors: /usr/local/src/cmake-2.8.4/Bootstrap.cmk/cmake_bootstrap.log
 ---------------------------------------------
-±¨´í£ºÈ±ÉÙCµÄ±àÒëÆ÷
-½â¾ö°ì·¨£º°²×°gcc±àÒëÆ÷
+æŠ¥é”™ï¼šç¼ºå°‘Cçš„ç¼–è¯‘å™¨
+è§£å†³åŠžæ³•ï¼šå®‰è£…gccç¼–è¯‘å™¨
 [root@localhost ~]# yum install gcc
 
-¼ÌÐø°²×°Cmake
+ç»§ç»­å®‰è£…Cmake
 [root@localhost cmake-2.8.4]# ./bootstrap
 
 ---------------------------------------------
@@ -45,106 +45,106 @@ See cmake_bootstrap.log for compilers attempted.
 ---------------------------------------------
 Log of errors: /usr/local/src/cmake-2.8.4/Bootstrap.cmk/cmake_bootstrap.log
 ---------------------------------------------
-±¨´í£ºÈ±ÉÙC++±àÒëÆ÷
-½â¾ö°ì·¨£º°²×°gcc-c++±àÒëÆ÷
+æŠ¥é”™ï¼šç¼ºå°‘C++ç¼–è¯‘å™¨
+è§£å†³åŠžæ³•ï¼šå®‰è£…gcc-c++ç¼–è¯‘å™¨
 [root@localhost ~]# yum install gcc-c++
 
-ÔÙ´Î°²×°
+å†æ¬¡å®‰è£…
 [root@localhost cmake-2.8.4]# ./bootstrap
-Ã»ÓÐ±¨´í£¬±àÒë°²×°
+æ²¡æœ‰æŠ¥é”™ï¼Œç¼–è¯‘å®‰è£…
 [root@localhost cmake-2.8.4]# gmake
 [root@localhost cmake-2.8.4]# gmake install
 
-4.ÕýÊ½¿ªÊ¼°²×°MySQL
-Ìí¼ÓMySQLÓÃ»§ºÍÓÃ»§×é
+4.æ­£å¼å¼€å§‹å®‰è£…MySQL
+æ·»åŠ MySQLç”¨æˆ·å’Œç”¨æˆ·ç»„
 [root@localhost ~]# groupadd mysql
 [root@localhost ~]# useradd -g mysql mysql
 
-MySQLÔ´Âë°ü´Ó¹²ÏíÎÄ¼þ¼ÐÒÆÖÁ/usr²¢½âÑ¹
+MySQLæºç åŒ…ä»Žå…±äº«æ–‡ä»¶å¤¹ç§»è‡³/usrå¹¶è§£åŽ‹
 [root@localhost ~]mv /mnt/hgfs/Share-CentOS/mysql-5.5.22.tar.gz /usr/mysql-5.5.22.tar.gz
 [root@localhost usr]# tar xzvf mysql-5.5.22.tar.gz
 [root@localhost usr]# cd mysql-5.5.22
 
-CmakeÔËÐÐ
+Cmakeè¿è¡Œ
 [root@localhost mysql-5.5.22]# cmake .
 
-¿ªÊ¼±àÒë°²×°
+å¼€å§‹ç¼–è¯‘å®‰è£…
 [root@localhost mysql-5.5.22]# make && make install
 
-½øÈë°²×°Ä¿Â¼£¬½«³ÌÐò¶þ½øÖÆµÄËùÓÐÈ¨¸ÄÎªroot£¬Êý¾ÝÄ¿Â¼µÄËµÓÐÈ¨¸ÄÎªmysqlÓÃ»§£¬¸üÐÂÊÚÈ¨±í
+è¿›å…¥å®‰è£…ç›®å½•ï¼Œå°†ç¨‹åºäºŒè¿›åˆ¶çš„æ‰€æœ‰æƒæ”¹ä¸ºrootï¼Œæ•°æ®ç›®å½•çš„è¯´æœ‰æƒæ”¹ä¸ºmysqlç”¨æˆ·ï¼Œæ›´æ–°æŽˆæƒè¡¨
 [root@localhost mysql-5.5.22]# cd /usr/local/mysql/
 [root@localhost mysql]# chown -R root .
 [root@localhost mysql]# chown -R mysql .
 [root@localhost mysql]# chgrp -R mysql .
 [root@localhost mysql]# scripts/mysql_install_db --user=mysql
 
-°²È«Æô¶¯MySQL(Ä¬ÈÏÃÜÂëÎª¿Õ)
+å®‰å…¨å¯åŠ¨MySQL(é»˜è®¤å¯†ç ä¸ºç©º)
 [root@localhost mysql]#./bin/mysqld_safe --user=mysql&
 
-±¨´í£º
+æŠ¥é”™ï¼š
 
 120908 00:16:25 mysqld_safe Logging to '/usr/local/mysql/data/CentOS.err'.
 120908 00:16:26 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data
 
-½â¾ö·½·¨£º
+è§£å†³æ–¹æ³•ï¼š
 [root@CentOS ~]# cd /usr/local/mysql/data
 
 [root@CentOS data]# ls -l
-×ÜÓÃÁ¿ 29744
--rw-rw----  1 mysql root      1585 9ÔÂ   8 00:16 CentOS.err
--rw-rw----  1 mysql mysql        6 9ÔÂ   8 00:16 CentOS.pid
--rw-rw----  1 mysql mysql 18874368 9ÔÂ   8 00:16 ibdata1
--rw-rw----  1 mysql mysql  5242880 9ÔÂ   8 00:16 ib_logfile0
--rw-rw----  1 mysql mysql  5242880 9ÔÂ   8 00:16 ib_logfile1
-drwxr-xr-x  2 mysql mysql     4096 9ÔÂ   8 00:14 mysql
--rw-rw----  1 mysql mysql    27293 9ÔÂ   8 00:14 mysql-bin.000001
--rw-rw----  1 mysql mysql  1031892 9ÔÂ   8 00:14 mysql-bin.000002
--rw-rw----  1 mysql mysql      107 9ÔÂ   8 00:16 mysql-bin.000003
--rw-rw----  1 mysql mysql       57 9ÔÂ   8 00:16 mysql-bin.index
-drwx------  2 mysql mysql     4096 9ÔÂ   8 00:14 performance_schema
-drwxr-xr-x  2 mysql mysql     4096 9ÔÂ   8 00:08 test
+æ€»ç”¨é‡ 29744
+-rw-rw----  1 mysql root      1585 9æœˆ   8 00:16 CentOS.err
+-rw-rw----  1 mysql mysql        6 9æœˆ   8 00:16 CentOS.pid
+-rw-rw----  1 mysql mysql 18874368 9æœˆ   8 00:16 ibdata1
+-rw-rw----  1 mysql mysql  5242880 9æœˆ   8 00:16 ib_logfile0
+-rw-rw----  1 mysql mysql  5242880 9æœˆ   8 00:16 ib_logfile1
+drwxr-xr-x  2 mysql mysql     4096 9æœˆ   8 00:14 mysql
+-rw-rw----  1 mysql mysql    27293 9æœˆ   8 00:14 mysql-bin.000001
+-rw-rw----  1 mysql mysql  1031892 9æœˆ   8 00:14 mysql-bin.000002
+-rw-rw----  1 mysql mysql      107 9æœˆ   8 00:16 mysql-bin.000003
+-rw-rw----  1 mysql mysql       57 9æœˆ   8 00:16 mysql-bin.index
+drwx------  2 mysql mysql     4096 9æœˆ   8 00:14 performance_schema
+drwxr-xr-x  2 mysql mysql     4096 9æœˆ   8 00:08 test
 [root@CentOS data]# chgrp -R mysql CentOS.err
 [root@CentOS data]# ls -l
-×ÜÓÃÁ¿ 29736
--rw-rw---- 1 mysql mysql     1585 9ÔÂ   8 00:16 CentOS.err
--rw-rw---- 1 mysql mysql        6 9ÔÂ   8 00:16 CentOS.pid
--rw-rw---- 1 mysql mysql 18874368 9ÔÂ   8 00:16 ibdata1
--rw-rw---- 1 mysql mysql  5242880 9ÔÂ   8 00:16 ib_logfile0
--rw-rw---- 1 mysql mysql  5242880 9ÔÂ   8 00:16 ib_logfile1
-drwxr-xr-x 2 mysql mysql     4096 9ÔÂ   8 00:14 mysql
--rw-rw---- 1 mysql mysql    27293 9ÔÂ   8 00:14 mysql-bin.000001
--rw-rw---- 1 mysql mysql  1031892 9ÔÂ   8 00:14 mysql-bin.000002
--rw-rw---- 1 mysql mysql      107 9ÔÂ   8 00:16 mysql-bin.000003
--rw-rw---- 1 mysql mysql       57 9ÔÂ   8 00:16 mysql-bin.index
-drwx------ 2 mysql mysql     4096 9ÔÂ   8 00:14 performance_schema
-drwxr-xr-x 2 mysql mysql     4096 9ÔÂ   8 00:08 test
+æ€»ç”¨é‡ 29736
+-rw-rw---- 1 mysql mysql     1585 9æœˆ   8 00:16 CentOS.err
+-rw-rw---- 1 mysql mysql        6 9æœˆ   8 00:16 CentOS.pid
+-rw-rw---- 1 mysql mysql 18874368 9æœˆ   8 00:16 ibdata1
+-rw-rw---- 1 mysql mysql  5242880 9æœˆ   8 00:16 ib_logfile0
+-rw-rw---- 1 mysql mysql  5242880 9æœˆ   8 00:16 ib_logfile1
+drwxr-xr-x 2 mysql mysql     4096 9æœˆ   8 00:14 mysql
+-rw-rw---- 1 mysql mysql    27293 9æœˆ   8 00:14 mysql-bin.000001
+-rw-rw---- 1 mysql mysql  1031892 9æœˆ   8 00:14 mysql-bin.000002
+-rw-rw---- 1 mysql mysql      107 9æœˆ   8 00:16 mysql-bin.000003
+-rw-rw---- 1 mysql mysql       57 9æœˆ   8 00:16 mysql-bin.index
+drwx------ 2 mysql mysql     4096 9æœˆ   8 00:14 performance_schema
+drwxr-xr-x 2 mysql mysql     4096 9æœˆ   8 00:08 test
 
-Á¬½Ó±¾»úMySQL
-[root@localhost mysql]#mysql ¨Cu root ¨Cp
-ÌáÊ¾ÊäÈëpassword£¬Ä¬ÈÏÎª¿Õ£¬°´Enter¼´¿É
+è¿žæŽ¥æœ¬æœºMySQL
+[root@localhost mysql]#mysql â€“u root â€“p
+æç¤ºè¾“å…¥passwordï¼Œé»˜è®¤ä¸ºç©ºï¼ŒæŒ‰Enterå³å¯
 
-¶Ï¿ªÁ¬½Ó
+æ–­å¼€è¿žæŽ¥
 mysql>exit;
 
-ÎªrootÕË»§ÉèÖÃÃÜÂë
+ä¸ºrootè´¦æˆ·è®¾ç½®å¯†ç 
 [root@localhost ~]# cd /usr/local/mysql/bin
 [root@localhost mysql]# ./bin/mysqladmin -u root password 123456
 Enter Password:123456
 
-ÉèÖÃÑ¡ÏîÎÄ¼þ£¬½«ÅäÖÃÎÄ¼þ¿½±´µ½/etcÏÂ
+è®¾ç½®é€‰é¡¹æ–‡ä»¶ï¼Œå°†é…ç½®æ–‡ä»¶æ‹·è´åˆ°/etcä¸‹
 [root@localhost mysql]# cp support-files/my-medium.cnf /etc/mysql.cnf
 
-ÉèÖÃ¿ª»ú×ÔÆô¶¯
+è®¾ç½®å¼€æœºè‡ªå¯åŠ¨
 [root@localhost mysql]# cp support-files/mysql.server /etc/init.d/mysql
 [root@localhost mysql]# chmod +x /etc/init.d/mysql
 
-Í¨¹ý·þÎñÀ´Æô¶¯ºÍ¹Ø±ÕMysql
+é€šè¿‡æœåŠ¡æ¥å¯åŠ¨å’Œå…³é—­Mysql
 [root@localhost ~]# service mysql start
 [root@localhost ~]# service mysql stop
 
-5.°²×°ÉèÖÃÍê±Ï£¬Ö®ºóÊ¹ÓÃÖ»ÐèÆô¶¯-Á¬½Ó-¶Ï¿ª-¹Ø±Õ£¬ÃüÁîÈçÏÂ£º
+5.å®‰è£…è®¾ç½®å®Œæ¯•ï¼Œä¹‹åŽä½¿ç”¨åªéœ€å¯åŠ¨-è¿žæŽ¥-æ–­å¼€-å…³é—­ï¼Œå‘½ä»¤å¦‚ä¸‹ï¼š
 [root@CentOS mysql]# service mysql start
-Starting MySQL..                                           [È·¶¨]
+Starting MySQL..                                           [ç¡®å®š]
 [root@CentOS mysql]# mysql -u root -p
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -173,8 +173,13 @@ mysql> show databases;
 mysql> exit;
 Bye
 [root@CentOS mysql]# service mysql stop
-Shutting down MySQL.                                       [È·¶¨]
+Shutting down MySQL.                                       [ç¡®å®š]
 
-6.ÆäËü£º
-²é¿´½ø³ÌÃüÁî ps ¨Cef|grep mysqld
-kill½ø³ÌÃüÁî kill ¨C9 ½ø³ÌºÅ 
+6.å…¶å®ƒï¼š
+æŸ¥çœ‹è¿›ç¨‹å‘½ä»¤ ps â€“ef|grep mysqld
+killè¿›ç¨‹å‘½ä»¤ kill â€“9 è¿›ç¨‹å·  set (0.07 sec)
+
+mysql> exit;
+Bye
+[root@CentOS mysql]# service mysql stop
+Shutting down MySQL.                                       [È·ï¿½ï¿½]
