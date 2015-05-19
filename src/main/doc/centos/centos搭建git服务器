@@ -1,0 +1,141 @@
+1.安装git,装好后用以下命令检测
+#git --version
+
+2.选择gitolite或者gitosis部署git服务
+
+gitosis
+#yum install python python-setuptools
+#cd /usr/local/src
+#git clone git://github.com/res0nat0r/gitosis.git
+#cd gitosis
+#python setup.py install
+
+3.配置git
+#git config --global user.name "Your Name Here"          
+#git config --global user.email "your_email@example.com"  
+可以再输入下面的命令查看上面两个是否设置
+#git config -l
+
+
+ 客户端生产密钥并上传到服务器端：
+
+#ssh-keygen -t rsa
+
+#scp ~/.ssh/id_rsa.pub root@192.168.56.1:~/
+
+ 
+
+服务端查看已经上传的密钥：ls ～/id_rsa.pub
+
+ 
+
+4. 服务器上生成git用户，使用git用户并初始化gitosis
+
+添加用户git：
+
+#useradd -r -s /bin/sh -c 'git version control' -d /home/git git
+
+设置权限：
+
+#mkdir -p /home/git
+
+#chown git:git /home/git
+
+ 
+
+在服务器端生成管理库：
+
+#sudo -H -u git gitosis-init < ～/id_rsa.pub
+
+Initialized empty Git repository in /home/git//repositories/gitosis-admin.git/ Reinitialized existing Git repository in /home/git/repositories/gitosis-admin.git/ 
+
+注解：
+
+1. 生成的gitosis-admin为Git的用户访问权限管理库，gitosis通过这个git库来管理所有git库的访问权限。
+
+2. 通过执行初始化，该公钥的拥有者就能修改用于配置gitosis的那个特殊Git仓库了
+
+ 
+
+修改上传权限：
+
+#chmod 755 /home/git/repositories/gitosis-admin.git/hooks/post-update
+
+ 
+
+
+5. 客户端导出管理
+
+#mkdir -p /git-repo/
+
+#cd /git-repo/
+
+#git clone git@192.168.56.1:gitosis-admin.git
+
+#cd gitosis-admin
+
+#find .
+
+./gitosis.conf
+
+./keydir
+
+./keydir/oot@vm1.pub
+
+注解：
+
+gitosis.conf文件用来设置用户、仓库和权限的控制文件
+
+keydir目录则是保存所有具有访问权限用户公钥的地方
+
+./keydir/root@vm1.pub:如前所述，该用户具有访问权限
+
+ 
+
+6. 客户端创建及设置管理项目
+
+#cd /git-repo/gitosis-admin
+
+查看已经上传密钥
+
+#ls keydir/
+
+root@vm1.pub
+
+ 
+
+授权和权限控制
+
+#vim gitosis.conf
+
+[gitosis]
+
+[group gitosis-admin]
+writable = gitosis-admin
+members = root@vm1        #显示用户root@vm1.pub是初始化gitosis公钥的拥有者，是唯一能管理gitosis-admin项目的人
+
+[group jay_fans]            #组名称
+members = root@vm1        #密钥用户名
+writable = git-test                #项目名称
+
+ 
+
+7. 初始、增加及使用项目git-test
+
+#cd /git-repo
+
+#mkdir git-test
+
+#cd git-test
+
+#git init
+
+#touch README
+
+#git add .
+
+#git commit -a -m "init git-test"
+
+#git remote add origin git@192.168.56.1:git-test.git
+
+#git push origin master
