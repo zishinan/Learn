@@ -19,4 +19,4 @@ HashSet底层操作的其实就是一个HashMap,将Set的类型作为Key,值作�
 Map：
 	HashMap：非线程同步，可以存储null,不考虑线程同步时都用HashMap而不用HashTable;
 	HashTable：线程同步，不能存储null;
-	TreeMap：底层是二叉树；可以对键排序；
+	TreeMap：底层是二叉树；可以对键排序;
