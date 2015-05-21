@@ -139,3 +139,7 @@ writable = git-test                #项目名称
 #git remote add origin git@192.168.56.1:git-test.git
 
 #git push origin master
+
+
+新增用户时将用户的密钥（*.pub）上传到gitosis-admin上
+管理gitosis-admin的gitosis.conf的内容用户名和key保持一致
