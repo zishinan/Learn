@@ -10,7 +10,7 @@ import com.ouyang.util.RmiUtil;
 public class RmiClient {
 	public static void main(String[] args) {
 		try {
-			PropertiesUtil.load("rmi.properties");
+			PropertiesUtil.loadAll();
 			IHello hello = (IHello)RmiUtil.lookup(IHello.class.getSimpleName());
 			String hw = hello.getHelloWorld();
 			System.out.println(hw);
