@@ -80,7 +80,7 @@ Initialized empty Git repository in /home/git//repositories/gitosis-admin.git/ R
 
 ./keydir
 
-./keydir/oot@vm1.pub
+./keydir/root@vm1.pub
 
 注解：
 

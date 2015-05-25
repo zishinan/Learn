@@ -12,8 +12,26 @@
 
 
 git提交命令
- git remote add origin git@192.168.199.229:DTSAndroidApp.git
+#git remote add origin git@192.168.199.229:DTSAndroidApp.git
  
  
 防火墙配置
 /etc/sysconfig/iptables
+
+查询防火墙状态:
+[root@localhost ~]# service   iptables status<回车>
+
+停止防火墙:
+[root@localhost ~]# service   iptables stop <回车>
+
+启动防火墙:
+[root@localhost ~]# service   iptables start <回车>
+
+重启防火墙:
+[root@localhost ~]# service   iptables restart <回车>
+
+永久关闭防火墙:
+[root@localhost ~]# chkconfig   iptables off<回车>
+
+永久关闭后启用:
+[root@localhost ~]# chkconfig   iptables on<回车>
