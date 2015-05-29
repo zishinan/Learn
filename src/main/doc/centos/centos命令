@@ -35,3 +35,7 @@ git提交命令
 
 永久关闭后启用:
 [root@localhost ~]# chkconfig   iptables on<回车>
+
+服务器时间校准
+#cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+#ntpdate us.pool.ntp.org
