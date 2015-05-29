@@ -16,7 +16,7 @@ git提交命令
  
  
 防火墙配置
-/etc/sysconfig/iptables
+#vim /etc/sysconfig/iptables
 
 查询防火墙状态:
 [root@localhost ~]# service   iptables status<回车>
