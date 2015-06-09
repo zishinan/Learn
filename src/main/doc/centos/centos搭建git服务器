@@ -21,7 +21,7 @@ gitosis
 
 #ssh-keygen -t rsa
 
-#scp ~/.ssh/id_rsa.pub root@192.168.56.1:~/
+#scp ~/.ssh/id_rsa.pub root@192.168.199.229:~/
 
  
 
@@ -45,7 +45,7 @@ gitosis
 
 在服务器端生成管理库：
 
-#sudo -H -u git gitosis-init < ～/id_rsa.pub
+#sudo -H -u git gitosis-init < ~/id_rsa.pub
 
 Initialized empty Git repository in /home/git//repositories/gitosis-admin.git/ Reinitialized existing Git repository in /home/git/repositories/gitosis-admin.git/ 
 
@@ -70,7 +70,7 @@ Initialized empty Git repository in /home/git//repositories/gitosis-admin.git/ R
 
 #cd /git-repo/
 
-#git clone git@192.168.56.1:gitosis-admin.git
+#git clone git@192.168.199.229:gitosis-admin.git
 
 #cd gitosis-admin
 
