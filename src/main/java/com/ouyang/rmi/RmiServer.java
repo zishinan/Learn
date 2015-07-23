@@ -2,8 +2,8 @@ package com.ouyang.rmi;
 
 import java.rmi.registry.LocateRegistry;
 
-import com.ouyang.util.PropertiesUtil;
-import com.ouyang.util.RmiUtil;
+import com.ouyang.util.file.PropertiesUtil;
+import com.ouyang.util.net.RmiUtil;
 
 public class RmiServer {
 	public static void main(String[] args) {

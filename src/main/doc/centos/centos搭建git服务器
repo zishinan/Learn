@@ -136,7 +136,7 @@ writable = git-test                #项目名称
 
 #git commit -a -m "init git-test"
 
-#git remote add origin git@192.168.56.1:git-test.git
+#git remote add origin git@192.168.199.229:DtsShopAndroidApp.git
 
 #git push origin master
 
