@@ -22,7 +22,12 @@
 		<dependency>
 			<groupId>com.ouyang.util</groupId>
 			<artifactId>MyUtil</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>1.8.2.RELEASE</version>
 		</dependency>
 	</dependencies>
 

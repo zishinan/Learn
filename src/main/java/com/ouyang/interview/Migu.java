@@ -1,7 +1,6 @@
 package com.ouyang.interview;
-
 /*
- 题目描述：
+题目描述：
 有N队学生，编号分别为1，2，3，…，n。每队上有若干学生，但学生总数必为n的倍数。可以在任一队上移动若干个学生。
 移动的规则是：在编号为1的队上移动学生，只能移到编号为2的队上；在编号为n的队上移动的学生，只能移动到编号为n-1
 的队上；其他队上移动的学生，可以移到相邻左边或右边的队上。现在要求找出一种移动方法，用最少的移动次数使每队上的
@@ -23,14 +22,11 @@ package com.ouyang.interview;
 1  
 */
 public class Migu {
-	
-	/**
-	 * 获取移动步数
-	 * @param nums 每队人数
-	 * @return
-	 */
-	public static int getStepNumber(int[] nums){
-		return nums.length;
+	public static void main(String[] args) {
+		ThreadLocal<String> threadLocal = new ThreadLocal<>();
 	}
 	
+	public static int getStep(int[] nums){
+		return 0;
+	}
 }

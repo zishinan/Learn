@@ -47,8 +47,6 @@ public class Test {
 				break;
 			}
 		}
-		
-		ArrayList<E>
 		scanner.close();
 	}
 }

@@ -3,7 +3,7 @@ package com.test.ouyang;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ouyang.util.PropertiesUtil;
+import com.ouyang.util.file.PropertiesUtil;
 
 
 public class RmiPropertyTest {
