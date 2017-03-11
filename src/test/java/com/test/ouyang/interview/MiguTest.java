@@ -9,7 +9,7 @@ public class MiguTest {
 	@Test
 	public void testMigu1() throws Exception {
 		int[] nums = {1,2,3};
-		Assert.assertEquals(1, Migu.getStep(nums));
+		Assert.assertEquals(2, Migu.getStep(nums));
 	}
 	
 	@Test

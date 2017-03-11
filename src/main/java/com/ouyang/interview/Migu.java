@@ -22,11 +22,32 @@ package com.ouyang.interview;
 1  
 */
 public class Migu {
-	public static void main(String[] args) {
-		ThreadLocal<String> threadLocal = new ThreadLocal<>();
-	}
-	
 	public static int getStep(int[] nums){
-		return 0;
+		int total = 0;
+		for (int i : nums) {
+			total += i;
+		}
+//		求平均数，并验证数据
+		int average = total / nums.length;
+		if(average*nums.length != total){
+			System.err.println("数据错误");
+			return -1;
+		}
+//		生成新的平均数差值数组
+		int[] aveNums = new int[nums.length];
+		for (int i = 0; i < nums.length; i++) {
+			aveNums[i] = nums[i] - average;
+		}
+//		计算总的步数
+		int totalStep = 0;
+		int temp = 0;
+		for (int i : aveNums) {
+			temp = temp + i;
+			if(temp == 0){
+				continue;
+			}
+			totalStep++;
+		}
+		return totalStep;
 	}
 }
