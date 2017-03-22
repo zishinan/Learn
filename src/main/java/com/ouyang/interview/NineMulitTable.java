@@ -1,4 +1,4 @@
-package com.ouyang.demo;
+package com.ouyang.interview;
 
 public class NineMulitTable {
 	public static void main(String[] args) {

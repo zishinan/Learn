@@ -1,5 +1,6 @@
 package com.test.ouyang;
 
+import java.io.File;
 
 public class Test {
 	
@@ -20,6 +21,10 @@ public class Test {
 		System.out.println(b);
 		System.out.println(person.getName());
 		System.out.println(person2.getName());
+		
+		
+		File file = new File("/abc");
+		file.mkdirs();
 		
 		
 		
